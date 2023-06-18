@@ -1,4 +1,4 @@
 .vs
 .vscode
 app/bin/*
-app/obj/Debug
+app/obj/Debug/*
