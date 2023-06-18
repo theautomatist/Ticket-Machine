@@ -54,9 +54,8 @@ Module Util
     Function load_cities_from_file(filePath As String) As List(Of City)
         Dim städteListe As New List(Of City)
         Dim kultur As CultureInfo = CultureInfo.InvariantCulture ' für . as ,
-        Dim ansiEncoding As Encoding = Encoding.GetEncoding(1252) ' ANSI-Zeichencodierung
         Try
-            Dim zeilen As String() = File.ReadAllLines(filePath, ansiEncoding)
+            Dim zeilen As String() = File.ReadAllLines(filePath)
 
             For Each zeile As String In zeilen
                 Dim spalte As String() = zeile.Split(";")
