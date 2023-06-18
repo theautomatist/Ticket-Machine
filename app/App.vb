@@ -145,7 +145,6 @@
         Passengers.Add(New Passenger(passenger_type, bahncard))
 
         Util.select_tab(main_tab_control, CHECK_OUT_TAB)
-        display_total_amount()
     End Sub
 #End Region
 
@@ -173,7 +172,6 @@
         Passengers.AddRange(reduced_passengers)
 
         Util.select_tab(main_tab_control, CHECK_OUT_TAB)
-        display_total_amount()
     End Sub
 
     Private Function verify_minimum_group_passengers() As Boolean
@@ -207,39 +205,21 @@
 #End Region
 
 #Region "Payment Type Tab"
-    Private Sub rb_bargeld_Click(sender As Object, e As EventArgs) Handles rb_bargeld.Click
-        display_total_amount()
+    Private Sub btn_cash_Click(sender As Object, e As EventArgs) Handles btn_cash.Click
+        PAYMENT_TYPE = PaymentType.Cash
+        display_recive()
     End Sub
 
-    Private Sub rb_eckarte_Click(sender As Object, e As EventArgs) Handles rb_eckarte.Click
-        display_total_amount()
+    Private Sub btn_ec_Click(sender As Object, e As EventArgs) Handles btn_ec.Click
+        PAYMENT_TYPE = PaymentType.EC
+        display_recive()
     End Sub
 
-    Private Sub rb_kreditkarte_Click(sender As Object, e As EventArgs) Handles rb_kreditkarte.Click
-        display_total_amount()
+    Private Sub btn_credit_card_Click(sender As Object, e As EventArgs) Handles btn_credit_card.Click
+        PAYMENT_TYPE = PaymentType.CreditCard
+        display_recive()
     End Sub
-
-
-    Private Function display_total_amount()
-        Dim payment_method_fee As Decimal
-        If rb_bargeld.Checked Then
-            PAYMENT_TYPE = PaymentType.Cash
-        ElseIf rb_eckarte.Checked Then
-            PAYMENT_TYPE = PaymentType.EC
-        Else
-            PAYMENT_TYPE = PaymentType.CreditCard
-        End If
-
-        payment_method_fee = get_payment_method_fee(PAYMENT_TYPE)
-
-        Dim summe As Decimal = Math.Round(calculate_prices(DepartureCity, ArrivalCity, Passengers).total * (1 + payment_method_fee), 2)
-
-        label_total_amount.Text = summe.ToString() + " €"
-        Return 0
-    End Function
-
-
-    Private Sub btn_complete_payment_Click(sender As Object, e As EventArgs) Handles btn_complete_payment.Click
+    Private Function display_recive()
         Util.select_tab(main_tab_control, RRCEIPT_TAB)
 
         label_start.Text = departure_combo_box.Text
@@ -272,7 +252,7 @@
 
         label_zahl_art.Text = PAYMENT_TYPE.ToString()
         label_zahl_gebühr.Text = Math.Round(get_payment_method_fee(PAYMENT_TYPE) * details.total, 2).ToString() + " €"
-    End Sub
+    End Function
 #End Region
     Private Function reset_start_tab()
         arrival_combo_box.Text = DEFAULT_DEPARTURE_ARRIVAL_VALUE
@@ -294,4 +274,5 @@
 
         Util.select_tab(main_tab_control, START_TAB)
     End Sub
+
 End Class

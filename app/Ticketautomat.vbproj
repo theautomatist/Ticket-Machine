@@ -167,9 +167,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="images.png" />
+    <None Include="brandhistory_mc_vrt_120_2x.png" />
     <Content Include="Cities.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="kisspng-credit-card-visa-logo-mastercard-visa-logo-svg-vector-amp-png-transparent-vecto-5b6e4791bac489.845100331533953.jpg" />
+    <None Include="Girocard_logo.svg.png" />
+    <None Include="money.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

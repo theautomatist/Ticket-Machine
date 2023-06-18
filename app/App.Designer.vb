@@ -60,12 +60,13 @@ Partial Class App
         Me.tb_gt_e_50 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Zahlung = New System.Windows.Forms.TabPage()
-        Me.label_total_amount = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.btn_complete_payment = New System.Windows.Forms.Button()
-        Me.rb_kreditkarte = New System.Windows.Forms.RadioButton()
-        Me.rb_eckarte = New System.Windows.Forms.RadioButton()
-        Me.rb_bargeld = New System.Windows.Forms.RadioButton()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btn_credit_card = New System.Windows.Forms.Button()
+        Me.btn_ec = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.label_entfernung = New System.Windows.Forms.Label()
@@ -106,6 +107,7 @@ Partial Class App
         Me.label_zahl_art = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.btn_restart = New System.Windows.Forms.Button()
+        Me.btn_cash = New System.Windows.Forms.Button()
         Me.main_tab_control.SuspendLayout()
         Me.Reiseziel.SuspendLayout()
         Me.Einzelticket.SuspendLayout()
@@ -114,6 +116,11 @@ Partial Class App
         Me.Gruppenticket.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Zahlung.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -236,6 +243,7 @@ Partial Class App
         Me.btn_single_ticket_proceed.Name = "btn_single_ticket_proceed"
         Me.btn_single_ticket_proceed.Size = New System.Drawing.Size(399, 40)
         Me.btn_single_ticket_proceed.TabIndex = 10
+        Me.btn_single_ticket_proceed.TabStop = False
         Me.btn_single_ticket_proceed.Text = "Weiter zu Zahlungsmethoden"
         Me.btn_single_ticket_proceed.UseVisualStyleBackColor = False
         '
@@ -342,12 +350,14 @@ Partial Class App
         'btn_group_ticket_proceed
         '
         Me.btn_group_ticket_proceed.BackColor = System.Drawing.SystemColors.Control
+        Me.btn_group_ticket_proceed.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.btn_group_ticket_proceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_group_ticket_proceed.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_group_ticket_proceed.Location = New System.Drawing.Point(6, 148)
         Me.btn_group_ticket_proceed.Name = "btn_group_ticket_proceed"
         Me.btn_group_ticket_proceed.Size = New System.Drawing.Size(399, 40)
         Me.btn_group_ticket_proceed.TabIndex = 11
+        Me.btn_group_ticket_proceed.TabStop = False
         Me.btn_group_ticket_proceed.Text = "Weiter zu Zahlungsmethoden"
         Me.btn_group_ticket_proceed.UseVisualStyleBackColor = False
         '
@@ -357,7 +367,7 @@ Partial Class App
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.5!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.5!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label5, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Label7, 3, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.tb_gt_e, 1, 3)
@@ -395,7 +405,7 @@ Partial Class App
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(209, 0)
+        Me.Label7.Location = New System.Drawing.Point(204, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(68, 13)
         Me.Label7.TabIndex = 7
@@ -403,16 +413,16 @@ Partial Class App
         '
         'tb_gt_e
         '
-        Me.tb_gt_e.Location = New System.Drawing.Point(67, 83)
+        Me.tb_gt_e.Location = New System.Drawing.Point(65, 83)
         Me.tb_gt_e.Name = "tb_gt_e"
-        Me.tb_gt_e.Size = New System.Drawing.Size(60, 20)
+        Me.tb_gt_e.Size = New System.Drawing.Size(57, 20)
         Me.tb_gt_e.TabIndex = 5
         Me.tb_gt_e.Text = "0"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(133, 0)
+        Me.Label6.Location = New System.Drawing.Point(128, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(68, 13)
         Me.Label6.TabIndex = 6
@@ -429,17 +439,17 @@ Partial Class App
         '
         'tb_gt_k
         '
-        Me.tb_gt_k.Location = New System.Drawing.Point(67, 52)
+        Me.tb_gt_k.Location = New System.Drawing.Point(65, 52)
         Me.tb_gt_k.Name = "tb_gt_k"
-        Me.tb_gt_k.Size = New System.Drawing.Size(60, 20)
+        Me.tb_gt_k.Size = New System.Drawing.Size(57, 20)
         Me.tb_gt_k.TabIndex = 4
         Me.tb_gt_k.Text = "0"
         '
         'tb_gt_er
         '
-        Me.tb_gt_er.Location = New System.Drawing.Point(67, 24)
+        Me.tb_gt_er.Location = New System.Drawing.Point(65, 24)
         Me.tb_gt_er.Name = "tb_gt_er"
-        Me.tb_gt_er.Size = New System.Drawing.Size(60, 20)
+        Me.tb_gt_er.Size = New System.Drawing.Size(57, 20)
         Me.tb_gt_er.TabIndex = 3
         Me.tb_gt_er.Text = "0"
         '
@@ -454,7 +464,7 @@ Partial Class App
         '
         'tb_gt_er_25
         '
-        Me.tb_gt_er_25.Location = New System.Drawing.Point(133, 24)
+        Me.tb_gt_er_25.Location = New System.Drawing.Point(128, 24)
         Me.tb_gt_er_25.Name = "tb_gt_er_25"
         Me.tb_gt_er_25.Size = New System.Drawing.Size(70, 20)
         Me.tb_gt_er_25.TabIndex = 8
@@ -462,7 +472,7 @@ Partial Class App
         '
         'tb_gt_k_25
         '
-        Me.tb_gt_k_25.Location = New System.Drawing.Point(133, 52)
+        Me.tb_gt_k_25.Location = New System.Drawing.Point(128, 52)
         Me.tb_gt_k_25.Name = "tb_gt_k_25"
         Me.tb_gt_k_25.Size = New System.Drawing.Size(70, 20)
         Me.tb_gt_k_25.TabIndex = 9
@@ -470,7 +480,7 @@ Partial Class App
         '
         'tb_gt_e_25
         '
-        Me.tb_gt_e_25.Location = New System.Drawing.Point(133, 83)
+        Me.tb_gt_e_25.Location = New System.Drawing.Point(128, 83)
         Me.tb_gt_e_25.Name = "tb_gt_e_25"
         Me.tb_gt_e_25.Size = New System.Drawing.Size(70, 20)
         Me.tb_gt_e_25.TabIndex = 10
@@ -478,7 +488,7 @@ Partial Class App
         '
         'tb_gt_er_50
         '
-        Me.tb_gt_er_50.Location = New System.Drawing.Point(209, 24)
+        Me.tb_gt_er_50.Location = New System.Drawing.Point(204, 24)
         Me.tb_gt_er_50.Name = "tb_gt_er_50"
         Me.tb_gt_er_50.Size = New System.Drawing.Size(70, 20)
         Me.tb_gt_er_50.TabIndex = 11
@@ -486,7 +496,7 @@ Partial Class App
         '
         'tb_gt_k_50
         '
-        Me.tb_gt_k_50.Location = New System.Drawing.Point(209, 52)
+        Me.tb_gt_k_50.Location = New System.Drawing.Point(204, 52)
         Me.tb_gt_k_50.Name = "tb_gt_k_50"
         Me.tb_gt_k_50.Size = New System.Drawing.Size(70, 20)
         Me.tb_gt_k_50.TabIndex = 12
@@ -494,7 +504,7 @@ Partial Class App
         '
         'tb_gt_e_50
         '
-        Me.tb_gt_e_50.Location = New System.Drawing.Point(209, 83)
+        Me.tb_gt_e_50.Location = New System.Drawing.Point(204, 83)
         Me.tb_gt_e_50.Name = "tb_gt_e_50"
         Me.tb_gt_e_50.Size = New System.Drawing.Size(70, 20)
         Me.tb_gt_e_50.TabIndex = 13
@@ -503,7 +513,7 @@ Partial Class App
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(67, 0)
+        Me.Label8.Location = New System.Drawing.Point(65, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(39, 13)
         Me.Label8.TabIndex = 14
@@ -511,12 +521,14 @@ Partial Class App
         '
         'Zahlung
         '
-        Me.Zahlung.Controls.Add(Me.label_total_amount)
-        Me.Zahlung.Controls.Add(Me.Label9)
-        Me.Zahlung.Controls.Add(Me.btn_complete_payment)
-        Me.Zahlung.Controls.Add(Me.rb_kreditkarte)
-        Me.Zahlung.Controls.Add(Me.rb_eckarte)
-        Me.Zahlung.Controls.Add(Me.rb_bargeld)
+        Me.Zahlung.Controls.Add(Me.PictureBox5)
+        Me.Zahlung.Controls.Add(Me.PictureBox4)
+        Me.Zahlung.Controls.Add(Me.PictureBox3)
+        Me.Zahlung.Controls.Add(Me.PictureBox2)
+        Me.Zahlung.Controls.Add(Me.PictureBox1)
+        Me.Zahlung.Controls.Add(Me.btn_credit_card)
+        Me.Zahlung.Controls.Add(Me.btn_ec)
+        Me.Zahlung.Controls.Add(Me.btn_cash)
         Me.Zahlung.Location = New System.Drawing.Point(4, 22)
         Me.Zahlung.Name = "Zahlung"
         Me.Zahlung.Padding = New System.Windows.Forms.Padding(3)
@@ -525,71 +537,81 @@ Partial Class App
         Me.Zahlung.Text = "Zahlung"
         Me.Zahlung.UseVisualStyleBackColor = True
         '
-        'label_total_amount
+        'PictureBox5
         '
-        Me.label_total_amount.AutoSize = True
-        Me.label_total_amount.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_total_amount.Location = New System.Drawing.Point(59, 86)
-        Me.label_total_amount.Name = "label_total_amount"
-        Me.label_total_amount.Size = New System.Drawing.Size(21, 13)
-        Me.label_total_amount.TabIndex = 13
-        Me.label_total_amount.Text = "0€"
+        Me.PictureBox5.Image = Global.Ticketautomat.My.Resources.Resources.kisspng_credit_card_visa_logo_mastercard_visa_logo_svg_vector_amp_png_transparent_vecto_5b6e4791bac489_845100331533953
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 132)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(42, 40)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 21
+        Me.PictureBox5.TabStop = False
         '
-        'Label9
+        'PictureBox4
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(8, 86)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(51, 13)
-        Me.Label9.TabIndex = 12
-        Me.Label9.Text = "Summe:"
+        Me.PictureBox4.Image = Global.Ticketautomat.My.Resources.Resources.brandhistory_mc_vrt_120_2x
+        Me.PictureBox4.Location = New System.Drawing.Point(48, 137)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(42, 29)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 20
+        Me.PictureBox4.TabStop = False
         '
-        'btn_complete_payment
+        'PictureBox3
         '
-        Me.btn_complete_payment.BackColor = System.Drawing.SystemColors.Control
-        Me.btn_complete_payment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_complete_payment.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_complete_payment.Location = New System.Drawing.Point(6, 147)
-        Me.btn_complete_payment.Name = "btn_complete_payment"
-        Me.btn_complete_payment.Size = New System.Drawing.Size(399, 40)
-        Me.btn_complete_payment.TabIndex = 11
-        Me.btn_complete_payment.Text = "Bezahlen"
-        Me.btn_complete_payment.UseVisualStyleBackColor = False
+        Me.PictureBox3.Image = Global.Ticketautomat.My.Resources.Resources.images
+        Me.PictureBox3.Location = New System.Drawing.Point(96, 132)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(42, 40)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 19
+        Me.PictureBox3.TabStop = False
         '
-        'rb_kreditkarte
+        'PictureBox2
         '
-        Me.rb_kreditkarte.AutoSize = True
-        Me.rb_kreditkarte.Location = New System.Drawing.Point(8, 52)
-        Me.rb_kreditkarte.Name = "rb_kreditkarte"
-        Me.rb_kreditkarte.Size = New System.Drawing.Size(108, 17)
-        Me.rb_kreditkarte.TabIndex = 2
-        Me.rb_kreditkarte.TabStop = True
-        Me.rb_kreditkarte.Text = "Kreditkarte (+ 3%)"
-        Me.rb_kreditkarte.UseVisualStyleBackColor = True
+        Me.PictureBox2.Image = Global.Ticketautomat.My.Resources.Resources.Girocard_logo_svg
+        Me.PictureBox2.Location = New System.Drawing.Point(96, 77)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(42, 40)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 18
+        Me.PictureBox2.TabStop = False
         '
-        'rb_eckarte
+        'PictureBox1
         '
-        Me.rb_eckarte.AutoSize = True
-        Me.rb_eckarte.Location = New System.Drawing.Point(8, 29)
-        Me.rb_eckarte.Name = "rb_eckarte"
-        Me.rb_eckarte.Size = New System.Drawing.Size(108, 17)
-        Me.rb_eckarte.TabIndex = 1
-        Me.rb_eckarte.TabStop = True
-        Me.rb_eckarte.Text = "EC Karte (+ 0.1%)"
-        Me.rb_eckarte.UseVisualStyleBackColor = True
+        Me.PictureBox1.Image = Global.Ticketautomat.My.Resources.Resources.money
+        Me.PictureBox1.Location = New System.Drawing.Point(96, 24)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(42, 40)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 17
+        Me.PictureBox1.TabStop = False
         '
-        'rb_bargeld
+        'btn_credit_card
         '
-        Me.rb_bargeld.AutoSize = True
-        Me.rb_bargeld.Checked = True
-        Me.rb_bargeld.Location = New System.Drawing.Point(8, 6)
-        Me.rb_bargeld.Name = "rb_bargeld"
-        Me.rb_bargeld.Size = New System.Drawing.Size(96, 17)
-        Me.rb_bargeld.TabIndex = 0
-        Me.rb_bargeld.TabStop = True
-        Me.rb_bargeld.Text = "Bargeld ( + 0%)"
-        Me.rb_bargeld.UseVisualStyleBackColor = True
+        Me.btn_credit_card.BackColor = System.Drawing.SystemColors.Control
+        Me.btn_credit_card.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_credit_card.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_credit_card.Location = New System.Drawing.Point(149, 132)
+        Me.btn_credit_card.Name = "btn_credit_card"
+        Me.btn_credit_card.Size = New System.Drawing.Size(198, 40)
+        Me.btn_credit_card.TabIndex = 16
+        Me.btn_credit_card.TabStop = False
+        Me.btn_credit_card.Text = "Kreditkarte ( + 0.03%)"
+        Me.btn_credit_card.UseVisualStyleBackColor = False
+        '
+        'btn_ec
+        '
+        Me.btn_ec.BackColor = System.Drawing.SystemColors.Control
+        Me.btn_ec.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_ec.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_ec.Location = New System.Drawing.Point(149, 77)
+        Me.btn_ec.Name = "btn_ec"
+        Me.btn_ec.Size = New System.Drawing.Size(198, 40)
+        Me.btn_ec.TabIndex = 15
+        Me.btn_ec.TabStop = False
+        Me.btn_ec.Text = "EC ( + 0.01%)"
+        Me.btn_ec.UseVisualStyleBackColor = False
         '
         'TabPage1
         '
@@ -1010,12 +1032,26 @@ Partial Class App
         '
         Me.btn_restart.BackColor = System.Drawing.Color.Cornsilk
         Me.btn_restart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_restart.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.3!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_restart.Location = New System.Drawing.Point(3, 220)
         Me.btn_restart.Name = "btn_restart"
         Me.btn_restart.Size = New System.Drawing.Size(411, 37)
         Me.btn_restart.TabIndex = 1
         Me.btn_restart.Text = "Neues Ticket"
         Me.btn_restart.UseVisualStyleBackColor = False
+        '
+        'btn_cash
+        '
+        Me.btn_cash.BackColor = System.Drawing.SystemColors.Control
+        Me.btn_cash.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_cash.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cash.Location = New System.Drawing.Point(149, 24)
+        Me.btn_cash.Name = "btn_cash"
+        Me.btn_cash.Size = New System.Drawing.Size(198, 40)
+        Me.btn_cash.TabIndex = 14
+        Me.btn_cash.TabStop = False
+        Me.btn_cash.Text = "Bar ( + 0%)"
+        Me.btn_cash.UseVisualStyleBackColor = False
         '
         'App
         '
@@ -1044,7 +1080,11 @@ Partial Class App
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.Zahlung.ResumeLayout(False)
-        Me.Zahlung.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage1.ResumeLayout(False)
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
@@ -1091,13 +1131,7 @@ Partial Class App
     Friend WithEvents Label8 As Label
     Friend WithEvents btn_single_ticket_proceed As Button
     Friend WithEvents btn_group_ticket_proceed As Button
-    Friend WithEvents rb_kreditkarte As RadioButton
-    Friend WithEvents rb_eckarte As RadioButton
-    Friend WithEvents rb_bargeld As RadioButton
-    Friend WithEvents btn_complete_payment As Button
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents label_total_amount As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
@@ -1137,4 +1171,12 @@ Partial Class App
     Friend WithEvents Label24 As Label
     Friend WithEvents label_zahl_gebühr As Label
     Friend WithEvents btn_restart As Button
+    Friend WithEvents btn_credit_card As Button
+    Friend WithEvents btn_ec As Button
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btn_cash As Button
 End Class
