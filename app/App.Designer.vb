@@ -60,13 +60,9 @@ Partial Class App
         Me.tb_gt_e_50 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Zahlung = New System.Windows.Forms.TabPage()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btn_credit_card = New System.Windows.Forms.Button()
         Me.btn_ec = New System.Windows.Forms.Button()
+        Me.btn_cash = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.label_entfernung = New System.Windows.Forms.Label()
@@ -107,7 +103,15 @@ Partial Class App
         Me.label_zahl_art = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.btn_restart = New System.Windows.Forms.Button()
-        Me.btn_cash = New System.Windows.Forms.Button()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.main_tab_control.SuspendLayout()
         Me.Reiseziel.SuspendLayout()
         Me.Einzelticket.SuspendLayout()
@@ -116,14 +120,18 @@ Partial Class App
         Me.Gruppenticket.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Zahlung.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage1.SuspendLayout()
-        Me.TableLayoutPanel3.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'main_tab_control
@@ -142,6 +150,8 @@ Partial Class App
         '
         'Reiseziel
         '
+        Me.Reiseziel.Controls.Add(Me.PictureBox7)
+        Me.Reiseziel.Controls.Add(Me.PictureBox6)
         Me.Reiseziel.Controls.Add(Me.btn_group)
         Me.Reiseziel.Controls.Add(Me.btn_single)
         Me.Reiseziel.Controls.Add(Me.Label2)
@@ -161,9 +171,9 @@ Partial Class App
         Me.btn_group.Enabled = False
         Me.btn_group.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_group.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_group.Location = New System.Drawing.Point(214, 101)
+        Me.btn_group.Location = New System.Drawing.Point(258, 101)
         Me.btn_group.Name = "btn_group"
-        Me.btn_group.Size = New System.Drawing.Size(187, 37)
+        Me.btn_group.Size = New System.Drawing.Size(143, 37)
         Me.btn_group.TabIndex = 6
         Me.btn_group.Text = "Gruppenticket"
         Me.btn_group.UseVisualStyleBackColor = True
@@ -173,9 +183,9 @@ Partial Class App
         Me.btn_single.Enabled = False
         Me.btn_single.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_single.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_single.Location = New System.Drawing.Point(6, 101)
+        Me.btn_single.Location = New System.Drawing.Point(50, 101)
         Me.btn_single.Name = "btn_single"
-        Me.btn_single.Size = New System.Drawing.Size(187, 37)
+        Me.btn_single.Size = New System.Drawing.Size(143, 37)
         Me.btn_single.TabIndex = 5
         Me.btn_single.Text = "Einzelticket"
         Me.btn_single.UseVisualStyleBackColor = True
@@ -222,6 +232,7 @@ Partial Class App
         '
         'Einzelticket
         '
+        Me.Einzelticket.Controls.Add(Me.PictureBox9)
         Me.Einzelticket.Controls.Add(Me.btn_single_ticket_proceed)
         Me.Einzelticket.Controls.Add(Me.GroupBox2)
         Me.Einzelticket.Controls.Add(Me.GroupBox1)
@@ -337,6 +348,7 @@ Partial Class App
         '
         'Gruppenticket
         '
+        Me.Gruppenticket.Controls.Add(Me.PictureBox8)
         Me.Gruppenticket.Controls.Add(Me.btn_group_ticket_proceed)
         Me.Gruppenticket.Controls.Add(Me.TableLayoutPanel1)
         Me.Gruppenticket.Location = New System.Drawing.Point(4, 22)
@@ -367,7 +379,7 @@ Partial Class App
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.5!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.5!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label5, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Label7, 3, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.tb_gt_e, 1, 3)
@@ -405,7 +417,7 @@ Partial Class App
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(204, 0)
+        Me.Label7.Location = New System.Drawing.Point(200, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(68, 13)
         Me.Label7.TabIndex = 7
@@ -413,16 +425,16 @@ Partial Class App
         '
         'tb_gt_e
         '
-        Me.tb_gt_e.Location = New System.Drawing.Point(65, 83)
+        Me.tb_gt_e.Location = New System.Drawing.Point(63, 83)
         Me.tb_gt_e.Name = "tb_gt_e"
-        Me.tb_gt_e.Size = New System.Drawing.Size(57, 20)
+        Me.tb_gt_e.Size = New System.Drawing.Size(55, 20)
         Me.tb_gt_e.TabIndex = 5
         Me.tb_gt_e.Text = "0"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(128, 0)
+        Me.Label6.Location = New System.Drawing.Point(124, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(68, 13)
         Me.Label6.TabIndex = 6
@@ -439,17 +451,17 @@ Partial Class App
         '
         'tb_gt_k
         '
-        Me.tb_gt_k.Location = New System.Drawing.Point(65, 52)
+        Me.tb_gt_k.Location = New System.Drawing.Point(63, 52)
         Me.tb_gt_k.Name = "tb_gt_k"
-        Me.tb_gt_k.Size = New System.Drawing.Size(57, 20)
+        Me.tb_gt_k.Size = New System.Drawing.Size(55, 20)
         Me.tb_gt_k.TabIndex = 4
         Me.tb_gt_k.Text = "0"
         '
         'tb_gt_er
         '
-        Me.tb_gt_er.Location = New System.Drawing.Point(65, 24)
+        Me.tb_gt_er.Location = New System.Drawing.Point(63, 24)
         Me.tb_gt_er.Name = "tb_gt_er"
-        Me.tb_gt_er.Size = New System.Drawing.Size(57, 20)
+        Me.tb_gt_er.Size = New System.Drawing.Size(55, 20)
         Me.tb_gt_er.TabIndex = 3
         Me.tb_gt_er.Text = "0"
         '
@@ -458,13 +470,13 @@ Partial Class App
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(3, 21)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(55, 26)
+        Me.Label3.Size = New System.Drawing.Size(49, 26)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Erwachene"
         '
         'tb_gt_er_25
         '
-        Me.tb_gt_er_25.Location = New System.Drawing.Point(128, 24)
+        Me.tb_gt_er_25.Location = New System.Drawing.Point(124, 24)
         Me.tb_gt_er_25.Name = "tb_gt_er_25"
         Me.tb_gt_er_25.Size = New System.Drawing.Size(70, 20)
         Me.tb_gt_er_25.TabIndex = 8
@@ -472,7 +484,7 @@ Partial Class App
         '
         'tb_gt_k_25
         '
-        Me.tb_gt_k_25.Location = New System.Drawing.Point(128, 52)
+        Me.tb_gt_k_25.Location = New System.Drawing.Point(124, 52)
         Me.tb_gt_k_25.Name = "tb_gt_k_25"
         Me.tb_gt_k_25.Size = New System.Drawing.Size(70, 20)
         Me.tb_gt_k_25.TabIndex = 9
@@ -480,7 +492,7 @@ Partial Class App
         '
         'tb_gt_e_25
         '
-        Me.tb_gt_e_25.Location = New System.Drawing.Point(128, 83)
+        Me.tb_gt_e_25.Location = New System.Drawing.Point(124, 83)
         Me.tb_gt_e_25.Name = "tb_gt_e_25"
         Me.tb_gt_e_25.Size = New System.Drawing.Size(70, 20)
         Me.tb_gt_e_25.TabIndex = 10
@@ -488,7 +500,7 @@ Partial Class App
         '
         'tb_gt_er_50
         '
-        Me.tb_gt_er_50.Location = New System.Drawing.Point(204, 24)
+        Me.tb_gt_er_50.Location = New System.Drawing.Point(200, 24)
         Me.tb_gt_er_50.Name = "tb_gt_er_50"
         Me.tb_gt_er_50.Size = New System.Drawing.Size(70, 20)
         Me.tb_gt_er_50.TabIndex = 11
@@ -496,7 +508,7 @@ Partial Class App
         '
         'tb_gt_k_50
         '
-        Me.tb_gt_k_50.Location = New System.Drawing.Point(204, 52)
+        Me.tb_gt_k_50.Location = New System.Drawing.Point(200, 52)
         Me.tb_gt_k_50.Name = "tb_gt_k_50"
         Me.tb_gt_k_50.Size = New System.Drawing.Size(70, 20)
         Me.tb_gt_k_50.TabIndex = 12
@@ -504,7 +516,7 @@ Partial Class App
         '
         'tb_gt_e_50
         '
-        Me.tb_gt_e_50.Location = New System.Drawing.Point(204, 83)
+        Me.tb_gt_e_50.Location = New System.Drawing.Point(200, 83)
         Me.tb_gt_e_50.Name = "tb_gt_e_50"
         Me.tb_gt_e_50.Size = New System.Drawing.Size(70, 20)
         Me.tb_gt_e_50.TabIndex = 13
@@ -513,7 +525,7 @@ Partial Class App
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(65, 0)
+        Me.Label8.Location = New System.Drawing.Point(63, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(39, 13)
         Me.Label8.TabIndex = 14
@@ -536,56 +548,6 @@ Partial Class App
         Me.Zahlung.TabIndex = 3
         Me.Zahlung.Text = "Zahlung"
         Me.Zahlung.UseVisualStyleBackColor = True
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = Global.Ticketautomat.My.Resources.Resources.kisspng_credit_card_visa_logo_mastercard_visa_logo_svg_vector_amp_png_transparent_vecto_5b6e4791bac489_845100331533953
-        Me.PictureBox5.Location = New System.Drawing.Point(0, 132)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(42, 40)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 21
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.Ticketautomat.My.Resources.Resources.brandhistory_mc_vrt_120_2x
-        Me.PictureBox4.Location = New System.Drawing.Point(48, 137)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(42, 29)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 20
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.Ticketautomat.My.Resources.Resources.images
-        Me.PictureBox3.Location = New System.Drawing.Point(96, 132)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(42, 40)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 19
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Ticketautomat.My.Resources.Resources.Girocard_logo_svg
-        Me.PictureBox2.Location = New System.Drawing.Point(96, 77)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(42, 40)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 18
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Ticketautomat.My.Resources.Resources.money
-        Me.PictureBox1.Location = New System.Drawing.Point(96, 24)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(42, 40)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 17
-        Me.PictureBox1.TabStop = False
         '
         'btn_credit_card
         '
@@ -612,6 +574,19 @@ Partial Class App
         Me.btn_ec.TabStop = False
         Me.btn_ec.Text = "EC ( + 0.01%)"
         Me.btn_ec.UseVisualStyleBackColor = False
+        '
+        'btn_cash
+        '
+        Me.btn_cash.BackColor = System.Drawing.SystemColors.Control
+        Me.btn_cash.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_cash.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_cash.Location = New System.Drawing.Point(149, 24)
+        Me.btn_cash.Name = "btn_cash"
+        Me.btn_cash.Size = New System.Drawing.Size(198, 40)
+        Me.btn_cash.TabIndex = 14
+        Me.btn_cash.TabStop = False
+        Me.btn_cash.Text = "Bar ( + 0%)"
+        Me.btn_cash.UseVisualStyleBackColor = False
         '
         'TabPage1
         '
@@ -1040,18 +1015,95 @@ Partial Class App
         Me.btn_restart.Text = "Neues Ticket"
         Me.btn_restart.UseVisualStyleBackColor = False
         '
-        'btn_cash
+        'PictureBox7
         '
-        Me.btn_cash.BackColor = System.Drawing.SystemColors.Control
-        Me.btn_cash.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_cash.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cash.Location = New System.Drawing.Point(149, 24)
-        Me.btn_cash.Name = "btn_cash"
-        Me.btn_cash.Size = New System.Drawing.Size(198, 40)
-        Me.btn_cash.TabIndex = 14
-        Me.btn_cash.TabStop = False
-        Me.btn_cash.Text = "Bar ( + 0%)"
-        Me.btn_cash.UseVisualStyleBackColor = False
+        Me.PictureBox7.Image = Global.Ticketautomat.My.Resources.Resources.icons8_benutzergruppen_100
+        Me.PictureBox7.Location = New System.Drawing.Point(214, 101)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(38, 37)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox7.TabIndex = 8
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = Global.Ticketautomat.My.Resources.Resources.person
+        Me.PictureBox6.Location = New System.Drawing.Point(6, 101)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(38, 37)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox6.TabIndex = 7
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = Global.Ticketautomat.My.Resources.Resources.kisspng_credit_card_visa_logo_mastercard_visa_logo_svg_vector_amp_png_transparent_vecto_5b6e4791bac489_845100331533953
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 132)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(42, 40)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 21
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.Ticketautomat.My.Resources.Resources.brandhistory_mc_vrt_120_2x
+        Me.PictureBox4.Location = New System.Drawing.Point(48, 137)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(42, 29)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 20
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.Ticketautomat.My.Resources.Resources.images
+        Me.PictureBox3.Location = New System.Drawing.Point(96, 132)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(42, 40)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 19
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Ticketautomat.My.Resources.Resources.Girocard_logo_svg
+        Me.PictureBox2.Location = New System.Drawing.Point(96, 77)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(42, 40)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 18
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Ticketautomat.My.Resources.Resources.money
+        Me.PictureBox1.Location = New System.Drawing.Point(96, 24)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(42, 40)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 17
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Image = Global.Ticketautomat.My.Resources.Resources.icons8_benutzergruppen_100
+        Me.PictureBox8.Location = New System.Drawing.Point(8, 6)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(38, 37)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox8.TabIndex = 12
+        Me.PictureBox8.TabStop = False
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Image = Global.Ticketautomat.My.Resources.Resources.person
+        Me.PictureBox9.Location = New System.Drawing.Point(8, 6)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(38, 37)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox9.TabIndex = 11
+        Me.PictureBox9.TabStop = False
         '
         'App
         '
@@ -1080,16 +1132,20 @@ Partial Class App
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.Zahlung.ResumeLayout(False)
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage1.ResumeLayout(False)
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1179,4 +1235,8 @@ Partial Class App
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btn_cash As Button
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents PictureBox9 As PictureBox
+    Friend WithEvents PictureBox8 As PictureBox
 End Class
