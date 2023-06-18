@@ -35,11 +35,13 @@ Module Util
 
         If discount_25_count > max_value Then
             discount_25_count_textbox.BackColor = Color.LightCoral
+            discount_50_count_textbox.BackColor = SystemColors.Window
             Return 1
         ElseIf discount_50_count > max_value Then
             discount_50_count_textbox.BackColor = Color.LightCoral
+            discount_25_count_textbox.BackColor = SystemColors.Window
             Return 1
-        ElseIf (discount_50_count + discount_50_count) > max_value Then
+        ElseIf (discount_25_count + discount_50_count) > max_value Then
             discount_25_count_textbox.BackColor = Color.LightCoral
             discount_50_count_textbox.BackColor = Color.LightCoral
             Return 1
