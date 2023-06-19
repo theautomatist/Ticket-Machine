@@ -167,8 +167,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="icons8-50-100.png" />
-    <None Include="icons8-25-100.png" />
     <None Include="person.png" />
     <None Include="icons8-benutzergruppen-100.png" />
     <None Include="images.png" />
