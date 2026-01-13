@@ -1,6 +1,6 @@
-# Ticketautomat
+# Ticket Machine
 
-`Ticketautomat` is a VB.NET Windows Forms app that simulates a train ticket vending machine. It guides users through selecting a route, choosing passengers and discounts, picking a payment method, and reviewing a receipt.
+`Ticket Machine` is a VB.NET Windows Forms app that simulates a train ticket vending machine. It guides users through selecting a route, choosing passengers and discounts, picking a payment method, and reviewing a receipt.
 
 ## Features
 - City-based routing with distance-driven pricing
